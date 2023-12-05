@@ -12,6 +12,8 @@
                 <?= $custom ?>
                 <div>
                     <small>
+                        <?= $price ?>
+                        <?= $quantity ?>
                     </small>
                 </div>
             </div>

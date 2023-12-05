@@ -1,5 +1,6 @@
 <?php
-class Movie
+include __DIR__ . "/Product.php";
+class Movie extends Product
 {
 
     // trascritte le relative proprietà che verranno assegnate ad ogni istanza creata
@@ -14,6 +15,7 @@ class Movie
     // dichiarazione tramite funzione del primo construttore che prendera i vari dati e poprietà
     function __construct($id, $title, $overview, $vote, $image, $language)
     {
+        parent::__construct();
         $this->id = $id;
         $this->title = $title;
         $this->overview = $overview;
@@ -37,6 +39,8 @@ class Movie
     // metodo utilizzato per stampare i vari dati in delle apposite card con l'ausilio di diverse variabili riprese tramite l'include su card.php
     public function printCard()
     {
+        $price = $this->price;
+        $quantity = $this->quantity;
         $image = $this->poster_path;
         $title = $this->title;
         $content = substr($this->overview, 0, 100) . '...';

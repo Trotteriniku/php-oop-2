@@ -1,11 +1,14 @@
 <!-- HEADER -->
 <?php
 include __DIR__ . '/header.php';
+include __DIR__ . '/../Control/GamesProduct.php';
 ?>
 
 <section class="container">
     <div class="row">
-        <h1>helooo</h1>
+        <?php foreach ($Games as $game) {
+            $game->Gamesprint();
+        } ?>
     </div>
 </section>
 
