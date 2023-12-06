@@ -1,7 +1,6 @@
 <!-- HEADER -->
 <?php
 include __DIR__.'/header.php';
-// include __DIR__.'/../Control/GamesP.php';
 
 $Games = GamesP::fetchall();
 
@@ -9,9 +8,14 @@ $Games = GamesP::fetchall();
 
 <section class="container">
     <div class="row">
-        <?php foreach($Games as $game) {
-            $game->printCard($game->formatCard());
-        } ?>
+        <?php if(isset($Games)) {
+            foreach($Games as $game) {
+                $game->printCard($game->formatCard());
+            }
+        } else {
+            echo 'C\'è un errore nella fetchall in GamesP.php';
+        }
+        ?>
     </div>
 </section>
 
