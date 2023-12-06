@@ -1,7 +1,7 @@
 <!-- HEADER -->
 <?php
 include __DIR__.'/header.php';
-include __DIR__.'/../Control/GamesP.php';
+// include __DIR__.'/../Control/GamesP.php';
 
 $Games = GamesP::fetchall();
 ?>

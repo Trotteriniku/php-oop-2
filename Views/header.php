@@ -1,7 +1,11 @@
 <?php
-include __DIR__."/../Control/Movie.php";
+
 include __DIR__."/../Control/Product.php";
-// include __DIR__."/../Control/GamesP.php";
+include __DIR__."/../Traits/DrawCard.php";
+include __DIR__."/../Control/Movie.php";
+include __DIR__.'/../Control/GamesP.php';
+
+
 
 ?>
 

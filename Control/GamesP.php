@@ -1,7 +1,6 @@
 <?php
-// include __DIR__."/Product.php";
-include __DIR__."/../Traits/DrawCard.php";
 class GamesP extends Product {
+
     use DrawCard;
     public $data;
 
