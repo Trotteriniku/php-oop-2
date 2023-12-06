@@ -1,5 +1,7 @@
 <?php
-include __DIR__ . "/../Control/Movie.php";
+include __DIR__."/../Control/Movie.php";
+include __DIR__."/../Control/Product.php";
+// include __DIR__."/../Control/GamesP.php";
 
 ?>
 

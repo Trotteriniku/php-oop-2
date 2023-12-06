@@ -1,12 +1,12 @@
 <!-- HEADER -->
 <?php
-include __DIR__ . '/Views/header.php';
+include __DIR__.'/Views/header.php';
 ?>
 
 <section class="container">
     <div class="row">
         <!-- ultimo ciclo per prendere tutti i dati contenuti nell'array $movies in modo da dar come valore le proprietà prese nel metodo  -->
-        <?php foreach ($movies as $movie) {
+        <?php foreach($movies as $movie) {
             $movie->printCard($movie->formatCard());
         } ?>
     </div>
@@ -14,5 +14,5 @@ include __DIR__ . '/Views/header.php';
 
 <!-- FOOTER -->
 <?php
-include __DIR__ . '/Views/footer.php';
+include __DIR__.'/Views/footer.php';
 ?>
