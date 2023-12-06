@@ -1,13 +1,14 @@
 <!-- HEADER -->
 <?php
 include __DIR__ . '/header.php';
-include __DIR__ . '/../Control/GamesProduct.php';
+include __DIR__ . '/../Control/GamesP.php';
+$Games = GamesP::fetchall();
 ?>
 
 <section class="container">
     <div class="row">
         <?php foreach ($Games as $game) {
-            $game->Gamesprint();
+            $game->printCard($game->formatCard());
         } ?>
     </div>
 </section>

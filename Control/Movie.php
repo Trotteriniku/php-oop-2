@@ -1,8 +1,9 @@
 <?php
 include __DIR__ . "/Product.php";
+include __DIR__ . "/../Traits/DrawCard.php";
 class Movie extends Product
 {
-
+    use DrawCard;
     // trascritte le relative proprietà che verranno assegnate ad ogni istanza creata
     private int $id;
     private string $title;
@@ -37,15 +38,17 @@ class Movie extends Product
     }
 
     // metodo utilizzato per stampare i vari dati in delle apposite card con l'ausilio di diverse variabili riprese tramite l'include su card.php
-    public function printCard()
+    public function formatCard()
     {
-        $price = $this->price;
-        $quantity = $this->quantity;
-        $image = $this->poster_path;
-        $title = $this->title;
-        $content = substr($this->overview, 0, 100) . '...';
-        $custom = $this->getVote();
-        include __DIR__ . '/../Views/card.php';
+        $cardItem = [
+            'price' => $this->price,
+            'image' => $this->poster_path,
+            'quantity' => $this->quantity,
+            'title' => $this->title,
+            'content' => substr($this->overview, 0, 100) . '...',
+            'custom' => $this->getVote()
+        ];
+        return $cardItem;
     }
 
 }

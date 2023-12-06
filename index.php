@@ -7,7 +7,7 @@ include __DIR__ . '/Views/header.php';
     <div class="row">
         <!-- ultimo ciclo per prendere tutti i dati contenuti nell'array $movies in modo da dar come valore le proprietà prese nel metodo  -->
         <?php foreach ($movies as $movie) {
-            $movie->printCard();
+            $movie->printCard($movie->formatCard());
         } ?>
     </div>
 </section>

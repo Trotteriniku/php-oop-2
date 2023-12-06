@@ -10,12 +10,7 @@ class Product
 
     }
 
-    public function printCard()
-    {
-        $price = $this->price;
-        $quantity = $this->quantity;
-        include __DIR__ . '/../Views/card.php';
-    }
+
 
 
 
