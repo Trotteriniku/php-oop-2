@@ -16,7 +16,8 @@ class GamesP extends Product {
             'quantity' => $this->quantity,
             'image' => $this->data['img_icon_url'],
             'title' => $this->data['name'],
-
+            'content' => '',
+            'custom' => ''
 
         ];
         return $itemCard;
@@ -32,6 +33,7 @@ class GamesP extends Product {
             $data = new GamesP($data);
             $Games[] = $data;
         }
+        return $Games;
     }
 
 
